@@ -1,19 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
-    <section class="Fperfil">
-    </section>
-    <section class="Biografia">
-    </section>
-    <section class="MisProyectos1">
-    </section>
-    <section class="Contactame">
-    </section>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#Información">Sobre Mi</a></li>
+                <li><a href="#Proyectos">Proyectos</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="Fperfil" id="Información">
+            <div class="Fperfil-tarjeta">
+                <img src="portafolio.jpg" alt="imagenperfil">
+                <div class="Fperfil-info">
+                    <h1>Isaac Chávez</h1>
+                    <span class="Fperfil-subtitulo">Ingeniero en Ciencias de la Computación</span>
+                    <p>Soy Isaac, estudiante de último año de Ingeniería en Ciencias de la Computación en la UNICAH.
+                        Me interesa todo lo relacionado con desarrollo de software y sistemas, disfruto descubrir como
+                        a traves de lineas de código se pueden construir soluciones espectaculares</p>
+                    <a href="#Contacto" class="btn-contacto">Hablemos</a>
+                </div>
+            </div>
+        </section>
+        <section class="MisProyectos1" id="Proyectos">
+            <div class="Fproyectos-tarjeta">
+                <div class="Fproyectos-info">
+                    <h1>Mis proyectos</h1>
+                    <span class="Fproyectos-subtitulo">Sistema Contable</span>
+                    <p>Este sistema fue solicitado a mi equipo y a mi desde hace mas de un año, el sistema consistia
+                        en poder llevar un control de ingresos y gastos que antes se hacia o en una hoja de excel o 
+                        completamente a mano, se logro llegar a una solución infórmatica.
+                    </p>
+                    <a href="https://github.com/chvzisaacc/SistemaContable" class="btn-verrepo">Ver repositorio</a>
+                </div>
+            </div>
+        </section>
+        <section class="Contactame" id="Contacto">
+            <div class="Contactame-tarjeta">
+                <div class="Contactame-info">
+                    <h1>Contáctame</h1>
+                    <span class="Contactame-subtitulo">Hablemos de tu proyecto</span>
+                    <form class="form-contacto" action="index.html" method="GET">
+                        <label for="txtNombre">Nombre</label>
+                        <input type="text" id="txtNombre" name="txtNombre" placeholder="Tu nombre" required>
+
+                        <label for="txtEmail">Email</label>
+                        <input type="email" id="txtEmail" name="txtEmail" placeholder="tucorreo@ejemplo.com" required>
+
+                        <label for="txtMensaje">Mensaje</label>
+                        <textarea id="txtMensaje" name="txtMensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+                        <div class="botones-contacto">
+                            <button type="submit" class="btn-contacto">Enviar</button>
+                            <a href="https://wa.me/50487531371" target="_blank" class="btn-whatsapp">Contactar vía WhatsApp</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

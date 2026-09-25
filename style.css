@@ -1,11 +1,349 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0B1320;
+    --white: #E5E5E5;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 50px clamp(20px, 8vw, 200px);
     margin: 0;
     background-color: #0B1320;
     color: #E5E5E5;
     font-family: "Roboto", 'Times New Roman', sans-serif;
+}
+
+.header {
+  background-color: var(--bg-dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #1509b8;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #1C77C3;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+section.Fperfil {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.Fperfil-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #131C2E;
+    border-radius: 14px;
+    padding: 1.8rem;
+    max-width: 600px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.Fperfil-tarjeta img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.Fperfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Fperfil-info h1 {
+    font-size: 22px;
+    margin-bottom: 0.1rem;
+}
+
+.Fperfil-subtitulo {
+    font-size: 0.9rem;
+    color: #8fa3c7;
+    margin-bottom: 0.6rem;
+}
+
+.Fperfil-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #b8c2d1;
+    margin-bottom: 0.9rem;
+}
+
+.btn-contacto {
+    background-color: #1C77C3;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+}
+
+.btn-contacto:hover {
+    background-color: #155b96;
+}
+
+@media (max-width: 768px) {
+    .Fperfil-tarjeta {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .Fperfil-info {
+        align-items: center;
+    }
+}
+
+section.MisProyectos1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.Fproyectos-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #131C2E;
+    border-radius: 14px;
+    padding: 1.8rem;
+    max-width: 600px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.Fproyectos-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Fproyectos-info h1 {
+    font-size: 22px;
+    margin-bottom: 0.1rem;
+}
+
+.Fproyectos-subtitulo {
+    font-size: 0.9rem;
+    color: #8fa3c7;
+    margin-bottom: 0.6rem;
+}
+
+.Fproyectos-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #b8c2d1;
+    margin-bottom: 0.9rem;
+}
+
+.btn-verrepo {
+    background-color: #1C77C3;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+}
+
+@media (max-width: 768px) {
+    .Fproyectos-tarjeta {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .Fproyectos-info {
+        align-items: center;
+    }
+}
+
+section.Contactame {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.Contactame-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #131C2E;
+    border-radius: 14px;
+    padding: 1.8rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.Contactame-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.Contactame-info h1 {
+    font-size: 22px;
+    margin-bottom: 0.1rem;
+}
+
+.Contactame-subtitulo {
+    font-size: 0.9rem;
+    color: #8fa3c7;
+    margin-bottom: 0.9rem;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-contacto label {
+    font-size: 0.85rem;
+    color: #b8c2d1;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    background-color: #0B1320;
+    border: 1px solid #24314a;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    color: #E5E5E5;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.form-contacto textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: #1C77C3;
+}
+
+.botones-contacto {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-contacto,
+.btn-whatsapp {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb459;
+}
+
+@media (max-width: 768px) {
+    .Contactame-info {
+        align-items: center;
+    }
+    .botones-contacto {
+        justify-content: center;
+    }
+}
+
+.mensaje-exito {
+    color: #25D366;
+    background-color: rgba(37, 211, 102, 0.1);
+    border: 1px solid #25D366;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
 }
